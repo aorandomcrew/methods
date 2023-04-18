@@ -11,8 +11,9 @@ public class Main {
         checkClientOS(clientOs, clientDeviceYear);
         System.out.println();
         //Задание 3
-        int deliveryDistance = 110;
-        checkDeliveryDistance(deliveryDistance);
+        int deliveryDistance = 111;
+        int distance = checkDeliveryDistance(deliveryDistance);
+        System.out.println("расстояние: " + distance + " км");
     }
 
     public static void checkIfYearLeap(int year) {
@@ -46,7 +47,7 @@ public class Main {
         }
     }
 
-    public static void checkDeliveryDistance(int deliveryDistance) {
+    public static int checkDeliveryDistance(int deliveryDistance) {
         System.out.println("Задание 3");
         if (deliveryDistance <= 20) {
             System.out.println("Потребуется дней: 1");
@@ -58,6 +59,8 @@ public class Main {
             System.out.println("Потребуется дней: 3");
         } else {
             System.out.println("доставка не осуществляется");
+
         }
+        return deliveryDistance;
     }
 }
